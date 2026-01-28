@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh Sách Sản Phẩm</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #e8f5e9;
+            /* Light green background similar to image */
+            margin: 0;
+            padding: 40px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background-color: transparent;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: transparent;
+        }
+
+        th {
+            text-align: left;
+            padding: 15px;
+            font-weight: bold;
+            color: #555;
+            text-transform: uppercase;
+            font-size: 0.85em;
+            border-bottom: 2px solid #ddeadd;
+        }
+
+        td {
+            padding: 15px;
+            vertical-align: middle;
+            border-bottom: 1px solid #ddeadd;
+            font-size: 0.95em;
+        }
+
+        /* ID Column */
+        .id-badge {
+            background-color: #00bcd4;
+            /* Cyan/Blue color */
+            color: white;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 0.9em;
+            display: inline-block;
+            min-width: 30px;
+            text-align: center;
+        }
+
+        /* Name Column */
+        .product-name {
+            font-weight: bold;
+            color: #2c3e50;
+            font-size: 1em;
+        }
+
+        /* Slug Column */
+        .product-slug {
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+
+        /* Price Column */
+        .product-price {
+            color: #2ecc71;
+            /* Green color */
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        /* Description Column */
+        .product-desc {
+            color: #666;
+            font-size: 0.9em;
+            max-width: 300px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        /* Category Column */
+        .product-category {
+            color: #008da6;
+            /* Darker cyan */
+            font-weight: 500;
+        }
+
+        /* Image Column */
+        .product-img {
+            width: 60px;
+            height: 60px;
+            border-radius: 6px;
+            object-fit: cover;
+            background-color: #eee;
+            display: block;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+
+            .product-desc,
+            .product-slug {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <table>
+            <thead>
+                <tr>
+                    <th style="width: 80px;">ID</th>
+                    <th style="width: 200px;">Name</th>
+                    <th style="width: 200px;">Slug</th>
+                    <th style="width: 100px;">Price</th>
+                    <th>Description</th>
+                    <th style="width: 120px;">Category</th>
+                    <th style="width: 80px;">Image</th>
+                </tr>
+            </thead>
+            <tbody id="product-list">
+                <!-- Data will be loaded here -->
+            </tbody>
+        </table>
+        <p id="loading" style="text-align:center;">Đang tải dữ liệu...</p>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
